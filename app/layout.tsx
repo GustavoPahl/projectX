@@ -1,27 +1,12 @@
-import type { Metadata, Viewport } from "next"
+import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 import "./globals.css"
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" })
 
 export const metadata: Metadata = {
-  title: "Zinz - A maior plataforma de intermediação de obras de franquias do Brasil",
-  description:
-    "Conectamos franqueados a prestadores de serviços especializados em reformas e construções comerciais. Facilite sua obra com segurança e suporte completo.",
-  keywords: [
-    "franquias",
-    "obras",
-    "reformas comerciais",
-    "construção",
-    "prestadores de serviços",
-    "Brasil",
-  ],
-}
-
-export const viewport: Viewport = {
-  themeColor: "#22a366",
-  width: "device-width",
-  initialScale: 1,
+  title: "Zinz - A maior plataforma de obras de franquias do Brasil",
+  description: "Conectamos franqueados a prestadores de servicos especializados em reformas e construcoes comerciais. Seguranca, transparencia e suporte completo.",
 }
 
 export default function RootLayout({
@@ -31,7 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-BR">
-      <body className={`${inter.variable} font-sans antialiased`}>{children}</body>
+      <body className={`${inter.variable} font-sans`}>{children}</body>
     </html>
   )
 }
