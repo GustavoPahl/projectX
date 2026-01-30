@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zinz Clone - Job Board</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Zinz Clone</h1>
+            <ul>
+                <li><a href="#jobs">Jobs</a></li>
+                <li><a href="#post">Post Job</a></li>
+                <li><a href="#login">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="hero">
+            <h2>Find Construction Jobs</h2>
+            <p>Connect providers with franchise works.</p>
+        </section>
+        <section id="jobs">
+            <h2>Latest Jobs</h2>
+            <div id="job-list">
+                <!-- Jobs added by JS -->
+            </div>
+        </section>
+        <section id="post">
+            <h2>Post a Job</h2>
+            <form id="job-form">
+                <input type="text" id="title" placeholder="Job Title (e.g., Plumbing for Store)" required>
+                <input type="text" id="budget" placeholder="Budget (R$)" required>
+                <textarea id="desc" placeholder="Description & Location"></textarea>
+                <button type="submit">Post Job</button>
+            </form>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
