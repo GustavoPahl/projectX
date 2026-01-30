@@ -35,7 +35,6 @@ export function Footer() {
     <footer className="border-t border-border bg-background">
       <div className="mx-auto max-w-7xl px-4 py-12 lg:px-8 lg:py-16">
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-          {/* Brand Column */}
           <div className="sm:col-span-2 lg:col-span-1">
             <Link href="/" className="flex items-center gap-2">
               <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary">
@@ -52,7 +51,6 @@ export function Footer() {
             </p>
           </div>
 
-          {/* Links Columns */}
           {Object.values(footerLinks).map((section) => (
             <div key={section.title}>
               <h3 className="font-semibold text-foreground">{section.title}</h3>
