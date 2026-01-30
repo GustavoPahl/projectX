@@ -1,43 +1,381 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zinz Clone - Job Board</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Zinz - A maior plataforma de intermediação de obras de franquias do Brasil. Conectamos franqueados a prestadores de serviços especializados.">
+  <title>Zinz | Facilite sua obra de franquia</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <nav>
-            <h1>Zinz Clone</h1>
-            <ul>
-                <li><a href="#jobs">Jobs</a></li>
-                <li><a href="#post">Post Job</a></li>
-                <li><a href="#login">Login</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section id="hero">
-            <h2>Find Construction Jobs</h2>
-            <p>Connect providers with franchise works.</p>
-        </section>
-        <section id="jobs">
-            <h2>Latest Jobs</h2>
-            <div id="job-list">
-                <!-- Jobs added by JS -->
+  <!-- Header -->
+  <header class="header">
+    <div class="container header-inner">
+      <a href="/" class="logo">
+        <span class="logo-text">Zinz</span>
+      </a>
+      <nav class="nav" id="nav">
+        <a href="#como-funciona" class="nav-link">Como Funciona</a>
+        <a href="#beneficios" class="nav-link">Benefícios</a>
+        <a href="#depoimentos" class="nav-link">Depoimentos</a>
+        <a href="#contato" class="nav-link">Contato</a>
+      </nav>
+      <div class="header-actions">
+        <a href="#contato" class="btn btn-primary">Solicitar Orçamento</a>
+      </div>
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <nav class="mobile-nav">
+      <a href="#como-funciona" class="mobile-nav-link">Como Funciona</a>
+      <a href="#beneficios" class="mobile-nav-link">Benefícios</a>
+      <a href="#depoimentos" class="mobile-nav-link">Depoimentos</a>
+      <a href="#contato" class="mobile-nav-link">Contato</a>
+      <a href="#contato" class="btn btn-primary btn-full">Solicitar Orçamento</a>
+    </nav>
+  </div>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="badge">A maior plataforma de intermediação de obras de franquias do Brasil</div>
+          <h1 class="hero-title">Facilite sua obra com a <span class="text-primary">Zinz</span></h1>
+          <p class="hero-description">Conectamos franqueados a prestadores de serviços especializados em reformas e construções comerciais</p>
+          
+          <!-- Trust Badges -->
+          <div class="trust-badges">
+            <div class="trust-badge">
+              <div class="trust-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+              </div>
+              <div class="trust-text">
+                <strong>Pagamento Protegido</strong>
+                <span>Compensação só liberada após aprovação</span>
+              </div>
             </div>
-        </section>
-        <section id="post">
-            <h2>Post a Job</h2>
-            <form id="job-form">
-                <input type="text" id="title" placeholder="Job Title (e.g., Plumbing for Store)" required>
-                <input type="text" id="budget" placeholder="Budget (R$)" required>
-                <textarea id="desc" placeholder="Description & Location"></textarea>
-                <button type="submit">Post Job</button>
-            </form>
-        </section>
-    </main>
-    <script src="script.js"></script>
+            <div class="trust-badge">
+              <div class="trust-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="m16 11 2 2 4-4"/></svg>
+              </div>
+              <div class="trust-text">
+                <strong>Prestadores Verificados</strong>
+                <span>Profissionais qualificados e avaliados</span>
+              </div>
+            </div>
+            <div class="trust-badge">
+              <div class="trust-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+              </div>
+              <div class="trust-text">
+                <strong>Suporte Completo</strong>
+                <span>Acompanhamento durante toda obra</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Stats -->
+          <div class="stats">
+            <div class="stat">
+              <span class="stat-number">500+</span>
+              <span class="stat-label">Obras Realizadas</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">150+</span>
+              <span class="stat-label">Prestadores Ativos</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">98%</span>
+              <span class="stat-label">Satisfação</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="form-card" id="contato">
+          <div class="form-header">
+            <h2 class="form-title">Preencha o formulário de contato</h2>
+            <p class="form-subtitle">Receba orçamentos de prestadores qualificados</p>
+          </div>
+          <form class="contact-form" id="contactForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Nome completo</label>
+                <input type="text" id="name" name="name" required placeholder="Seu nome">
+              </div>
+              <div class="form-group">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" required placeholder="seu@email.com">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="phone">Telefone</label>
+                <input type="tel" id="phone" name="phone" required placeholder="(00) 00000-0000">
+              </div>
+              <div class="form-group">
+                <label for="franchise">Franquia</label>
+                <input type="text" id="franchise" name="franchise" placeholder="Nome da franquia">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="service">Tipo de serviço</label>
+              <select id="service" name="service" required>
+                <option value="">Selecione o serviço</option>
+                <option value="reforma">Reforma Completa</option>
+                <option value="construcao">Construção Nova</option>
+                <option value="adequacao">Adequação de Layout</option>
+                <option value="manutencao">Manutenção Predial</option>
+                <option value="eletrica">Instalação Elétrica</option>
+                <option value="hidraulica">Instalação Hidráulica</option>
+                <option value="outro">Outro</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="description">Descrição da obra</label>
+              <textarea id="description" name="description" rows="4" placeholder="Descreva os detalhes do seu projeto, áreas envolvidas, prazos desejados..."></textarea>
+            </div>
+            <div class="form-group">
+              <label for="photos">Fotos do local (opcional)</label>
+              <div class="file-upload" id="fileUpload">
+                <input type="file" id="photos" name="photos" multiple accept="image/*">
+                <div class="file-upload-content">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                  <span>Arraste arquivos ou clique para selecionar</span>
+                  <small>PNG, JPG até 10MB</small>
+                </div>
+              </div>
+              <div class="file-list" id="fileList"></div>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full btn-lg">
+              Solicitar Orçamentos
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it Works -->
+    <section class="section" id="como-funciona">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Como Funciona</h2>
+          <p class="section-description">Processo simples e transparente em 4 etapas</p>
+        </div>
+        <div class="steps-grid">
+          <div class="step">
+            <div class="step-number">1</div>
+            <h3 class="step-title">Descreva sua Obra</h3>
+            <p class="step-description">Preencha o formulário com os detalhes do seu projeto de reforma ou construção</p>
+          </div>
+          <div class="step">
+            <div class="step-number">2</div>
+            <h3 class="step-title">Receba Orçamentos</h3>
+            <p class="step-description">Prestadores verificados enviam propostas detalhadas para seu projeto</p>
+          </div>
+          <div class="step">
+            <div class="step-number">3</div>
+            <h3 class="step-title">Compare e Escolha</h3>
+            <p class="step-description">Avalie perfis, avaliações e preços para escolher o melhor profissional</p>
+          </div>
+          <div class="step">
+            <div class="step-number">4</div>
+            <h3 class="step-title">Obra Acompanhada</h3>
+            <p class="step-description">Acompanhe o progresso com suporte Zinz até a conclusão</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Benefits -->
+    <section class="section section-gray" id="beneficios">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Por que escolher a Zinz?</h2>
+          <p class="section-description">Benefícios exclusivos para franqueados e prestadores</p>
+        </div>
+        <div class="benefits-grid">
+          <div class="benefit-card">
+            <div class="benefit-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            </div>
+            <h3 class="benefit-title">Pagamento Seguro</h3>
+            <p class="benefit-description">Compensação só liberada após aprovação do franqueado. Seu dinheiro protegido do início ao fim.</p>
+          </div>
+          <div class="benefit-card">
+            <div class="benefit-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h3 class="benefit-title">Garantia de Qualidade</h3>
+            <p class="benefit-description">Todos os prestadores passam por verificação rigorosa. Qualidade garantida em cada projeto.</p>
+          </div>
+          <div class="benefit-card">
+            <div class="benefit-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            </div>
+            <h3 class="benefit-title">Orçamentos Transparentes</h3>
+            <p class="benefit-description">Receba propostas detalhadas com custos discriminados. Sem surpresas no final.</p>
+          </div>
+          <div class="benefit-card">
+            <div class="benefit-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <h3 class="benefit-title">Rede Especializada</h3>
+            <p class="benefit-description">Prestadores com experiência comprovada em obras de franquias comerciais.</p>
+          </div>
+          <div class="benefit-card">
+            <div class="benefit-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <h3 class="benefit-title">Agilidade</h3>
+            <p class="benefit-description">Receba múltiplos orçamentos em até 48 horas. Agilize o início da sua obra.</p>
+          </div>
+          <div class="benefit-card">
+            <div class="benefit-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            </div>
+            <h3 class="benefit-title">Suporte Dedicado</h3>
+            <p class="benefit-description">Equipe disponível para ajudar em todas as etapas, do orçamento à entrega final.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section" id="depoimentos">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">O que dizem nossos clientes</h2>
+          <p class="section-description">Histórias de sucesso de franqueados que confiaram na Zinz</p>
+        </div>
+        <div class="testimonials-grid">
+          <div class="testimonial-card">
+            <div class="testimonial-content">
+              <svg class="quote-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M11.192 15.757c0-.88-.23-1.618-.69-2.217-.326-.412-.768-.683-1.327-.812-.55-.128-1.07-.137-1.54-.028-.16-.95.1-1.956.76-3.022.66-1.065 1.515-1.867 2.558-2.403L9.373 5c-.8.396-1.56.898-2.26 1.505-.71.607-1.34 1.305-1.9 2.094s-.98 1.68-1.25 2.69-.346 2.04-.217 3.1c.168 1.4.62 2.52 1.356 3.35.735.84 1.652 1.26 2.748 1.26.965 0 1.766-.29 2.4-.878.628-.576.94-1.365.94-2.368l.002.003zm9.124 0c0-.88-.23-1.618-.69-2.217-.326-.42-.768-.695-1.327-.825-.55-.13-1.07-.14-1.54-.03-.16-.94.09-1.95.75-3.02.66-1.06 1.514-1.86 2.557-2.4L18.49 5c-.8.396-1.555.898-2.26 1.505-.708.607-1.34 1.305-1.894 2.094-.556.79-.97 1.68-1.24 2.69-.273 1-.345 2.04-.217 3.1.168 1.4.62 2.52 1.356 3.35.735.84 1.652 1.26 2.748 1.26.965 0 1.766-.29 2.4-.878.628-.576.94-1.365.94-2.368l-.007.003z"/></svg>
+              <p class="testimonial-text">Não apenas pela obra realizada, mas saber que você tem o suporte da Zinz durante toda a reforma. Isso faz toda a diferença quando você está abrindo uma nova unidade.</p>
+            </div>
+            <div class="testimonial-author">
+              <div class="author-avatar">MC</div>
+              <div class="author-info">
+                <strong>Marcos Costa</strong>
+                <span>Franqueado - O Boticário</span>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-content">
+              <svg class="quote-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M11.192 15.757c0-.88-.23-1.618-.69-2.217-.326-.412-.768-.683-1.327-.812-.55-.128-1.07-.137-1.54-.028-.16-.95.1-1.956.76-3.022.66-1.065 1.515-1.867 2.558-2.403L9.373 5c-.8.396-1.56.898-2.26 1.505-.71.607-1.34 1.305-1.9 2.094s-.98 1.68-1.25 2.69-.346 2.04-.217 3.1c.168 1.4.62 2.52 1.356 3.35.735.84 1.652 1.26 2.748 1.26.965 0 1.766-.29 2.4-.878.628-.576.94-1.365.94-2.368l.002.003zm9.124 0c0-.88-.23-1.618-.69-2.217-.326-.42-.768-.695-1.327-.825-.55-.13-1.07-.14-1.54-.03-.16-.94.09-1.95.75-3.02.66-1.06 1.514-1.86 2.557-2.4L18.49 5c-.8.396-1.555.898-2.26 1.505-.708.607-1.34 1.305-1.894 2.094-.556.79-.97 1.68-1.24 2.69-.273 1-.345 2.04-.217 3.1.168 1.4.62 2.52 1.356 3.35.735.84 1.652 1.26 2.748 1.26.965 0 1.766-.29 2.4-.878.628-.576.94-1.365.94-2.368l-.007.003z"/></svg>
+              <p class="testimonial-text">Não apenas pela obra realizada, mas saber que você tem o suporte da Zinz durante toda a reforma. A equipe me ajudou a encontrar o prestador ideal para minha loja.</p>
+            </div>
+            <div class="testimonial-author">
+              <div class="author-avatar">AS</div>
+              <div class="author-info">
+                <strong>Ana Silva</strong>
+                <span>Franqueada - Cacau Show</span>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-content">
+              <svg class="quote-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M11.192 15.757c0-.88-.23-1.618-.69-2.217-.326-.412-.768-.683-1.327-.812-.55-.128-1.07-.137-1.54-.028-.16-.95.1-1.956.76-3.022.66-1.065 1.515-1.867 2.558-2.403L9.373 5c-.8.396-1.56.898-2.26 1.505-.71.607-1.34 1.305-1.9 2.094s-.98 1.68-1.25 2.69-.346 2.04-.217 3.1c.168 1.4.62 2.52 1.356 3.35.735.84 1.652 1.26 2.748 1.26.965 0 1.766-.29 2.4-.878.628-.576.94-1.365.94-2.368l.002.003zm9.124 0c0-.88-.23-1.618-.69-2.217-.326-.42-.768-.695-1.327-.825-.55-.13-1.07-.14-1.54-.03-.16-.94.09-1.95.75-3.02.66-1.06 1.514-1.86 2.557-2.4L18.49 5c-.8.396-1.555.898-2.26 1.505-.708.607-1.34 1.305-1.894 2.094-.556.79-.97 1.68-1.24 2.69-.273 1-.345 2.04-.217 3.1.168 1.4.62 2.52 1.356 3.35.735.84 1.652 1.26 2.748 1.26.965 0 1.766-.29 2.4-.878.628-.576.94-1.365.94-2.368l-.007.003z"/></svg>
+              <p class="testimonial-text">Não apenas pela obra realizada, mas saber que você tem o suporte da Zinz durante toda a reforma. Consegui economizar tempo e dinheiro com os orçamentos comparativos.</p>
+            </div>
+            <div class="testimonial-author">
+              <div class="author-avatar">RL</div>
+              <div class="author-info">
+                <strong>Roberto Lima</strong>
+                <span>Franqueado - Subway</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+      <div class="container">
+        <div class="cta-content">
+          <h2 class="cta-title">Pronto para facilitar sua obra?</h2>
+          <p class="cta-description">Junte-se a centenas de franqueados que já confiam na Zinz para suas reformas e construções.</p>
+          <a href="#contato" class="btn btn-white btn-lg">
+            Solicitar Orçamento Grátis
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo">
+            <span class="logo-text">Zinz</span>
+          </a>
+          <p class="footer-tagline">A maior plataforma de intermediação de obras de franquias do Brasil.</p>
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Instagram">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="LinkedIn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="WhatsApp">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h4>Plataforma</h4>
+          <ul>
+            <li><a href="#como-funciona">Como Funciona</a></li>
+            <li><a href="#beneficios">Benefícios</a></li>
+            <li><a href="#depoimentos">Depoimentos</a></li>
+            <li><a href="#contato">Solicitar Orçamento</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Para Prestadores</h4>
+          <ul>
+            <li><a href="#">Cadastre-se</a></li>
+            <li><a href="#">Como Funciona</a></li>
+            <li><a href="#">Oportunidades</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Contato</h4>
+          <ul>
+            <li><a href="mailto:contato@zinz.com.br">contato@zinz.com.br</a></li>
+            <li><a href="tel:+5511999999999">(11) 99999-9999</a></li>
+            <li><a href="#">Central de Ajuda</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Zinz. Todos os direitos reservados.</p>
+        <div class="footer-legal">
+          <a href="#">Termos de Uso</a>
+          <a href="#">Política de Privacidade</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
